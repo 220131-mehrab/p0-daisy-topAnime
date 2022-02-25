@@ -26,4 +26,14 @@ public class AniRepo {
     public List<String> getAnime() {
         return anime;
     }
+
+    public String getAnime(String name) {
+        String result = "";
+        for (String anime : this.anime) {
+            if (anime.contains(name)){
+                result = anime;
+            }
+        }
+        return result;
+    }
 }

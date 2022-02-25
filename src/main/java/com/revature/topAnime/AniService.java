@@ -16,8 +16,15 @@ public class AniService extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        for (String anime : aniRepo.getAnime()) {
-            resp.getWriter().println(anime);
+        String userInput;
+        userInput = req.getParameter("searchName");
+
+        if (userInput != null) {
+            String result = aniRepo.getAnime(userInput);
+            resp.getWriter().println(result);
+        } else
+            for (String anime : aniRepo.getAnime()) {
+                resp.getWriter().println(anime);
         }
     }
 }
