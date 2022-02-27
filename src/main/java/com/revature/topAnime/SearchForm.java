@@ -15,12 +15,14 @@ public class SearchForm extends HttpServlet {
                 "    <Title>Search Anime List</Title>\n" +
                 "</Head>\n" +
                 "<Body>\n" +
+                "    <h1>Top Anime Search</h1>\n" +
                 "    <form " +
-                "action='/' method='get'>\n" +
+                "action='' method='get'>\n" +
                 "            <input type='name' name='searchName" +
                 "'/>\n" +
                 "            <input type='submit' value='Search" +
                 "'/>\n" +
+                "            <a href='/topanime/anime'>See Full Anime List</a>\n" +
                 "    </form>\n" +
                 "</Body>\n" +
                 "</Html>";
