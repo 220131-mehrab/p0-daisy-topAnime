@@ -16,7 +16,6 @@ public class App {
         server.getConnector();
         server.addContext(webAppName, null);
 
-        server.addServlet(webAppName, "defaultServlet", new DefaultServlet()).addMapping("/*");
         server.addServlet(webAppName,"aniServlet", aniService).addMapping("/anime");
         server.addServlet(webAppName, "searchForm", searchForm).addMapping("/search");
         //System.out.println("Server running on http://localhost:" + );
