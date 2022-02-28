@@ -4,7 +4,6 @@ public class Anime {
     private String Name;
     private double Ranking;
     private int ID;
-    private int Followers;
     private String Type;
     private int Episodes;
     private String License;
@@ -23,10 +22,6 @@ public class Anime {
 
     public int getID() {
         return ID;
-    }
-
-    public int getFollowers() {
-        return Followers;
     }
 
     public String getType() {
@@ -69,38 +64,42 @@ public class Anime {
 
     public void setID(int ID) {
         this.ID = ID;
+        //return this;
     }
 
-    public void setFollowers(int followers) {
-        Followers = followers;
-    }
-
-    public void setType(String type) {
+    public Anime setType(String type) {
         Type = type;
+        return this;
     }
 
-    public void setEpisodes(int episodes) {
+    public Anime setEpisodes(int episodes) {
         Episodes = episodes;
+        return this;
     }
 
-    public void setLicense(String license) {
+    public Anime setLicense(String license) {
         License = license;
+        return this;
     }
 
-    public void setStudio(String studio) {
+    public Anime setStudio(String studio) {
         Studio = studio;
+        return this;
     }
 
-    public void setGenre(String genre) {
+    public Anime setGenre(String genre) {
         Genre = genre;
+        return this;
     }
 
-    public void setDemographic(String demographic) {
+    public Anime setDemographic(String demographic) {
         Demographic = demographic;
+        return this;
     }
 
-    public void setRating(String rating) {
+    public Anime setRating(String rating) {
         Rating = rating;
+        return this;
     }
 
     public static Anime of() {
